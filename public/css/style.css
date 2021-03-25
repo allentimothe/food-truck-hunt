@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+/* VARIABLES */
+:root {
+  --powder-red: #823531;
+  --powder-gold: #989423;
+  --white: #fefefe;
+  --light-green: #c6d8ab;
+}
+
+/* GENERAL */
+body {
+  font-family: helvetica;
+  margin: 0;
+  background-image: url("./images/bkgrnd.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--powder-red);
+  height: 8vh;
+  box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+  
+}
+.homeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.anchor {
+  display: flex;
+  justify-content: space-around;
+  /* margin-left: 40px; */
+  width: 40vh;
+}
+
+.loginContainer {
+  display: flex;
+  height:28vh;
+  width: 40vh;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.main {
+  height: 100vh;
+  width: 170vh;
+  display: flex;
+  align-items: center;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+legend {
+  padding: 0px 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
+  color: var(--white);
+  background-color: var(--powder-red);
+  background: var(--powder-red);
+  box-shadow: 2px 2px var(--powder-gold);
+}
+label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  color: var(--bright-orange);
+  display: block;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 5px;
+}
+
+.dashnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+input:focus {
+  /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
+  outline: 0;
+  border: 1px solid var(--purple);
+}
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: var(--powder-red);
+  box-shadow: 2px 2px var(--powder-gold);
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3em;
+  color: whitesmoke;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--white);
+  box-shadow: 2px 2px var(--powder-gold);
+  color: black;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  width: 25vh;
+  height: 5vh;
+  background: var(--powder-red);
+  box-shadow: 2px 2px var(--powder-gold);
+  border: 0px;
+  transition: 0.2s ease-in-out;
+  color: white;
+  margin-top: 10px;
+
+  
+}
+
+button:hover {
+  cursor: pointer;
+  background: var(--white);
+  box-shadow: 2px 2px var(--powder-gold)
+ }
+
+
+.dashContainer {
+  display: flex;
+  height:28vh;
+  width: 40vh;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.createContainer {
+  display: flex;
+  height:28vh;
+  width: 40vh;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.35);
+
+}
+
+.createMain {
+  height: 100vh;
+  width: 170vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availContainer {
+  display: flex;
+  height:60vh;
+  width: 40vh;
+  margin-left: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.35);
+
+}
+
+.availMain {
+  height: 100vh;
+  width: 170vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
+
+#menu-text {
+  text-shadow: 2px 2px 0px #595858;
+
+}
