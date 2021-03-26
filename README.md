@@ -17,7 +17,7 @@ A minimalisticly themed display for recent updates from the NY Times.
 ![live](/Users/allentimothe/Desktop/dev-portfolio/food-truck-hunt/public/css/images/live.png)
 
 ## 🎬 Getting Started
-[Click](ht) here to see the live app! 
+[Click](https://food-truck-hunt.herokuapp.com/users/signin) here to see the live app! 
 
 ## 🛠 Future Enhancements
 - Add POS System with Swipe Add To Cart Feature
