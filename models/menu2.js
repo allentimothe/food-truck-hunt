@@ -20,7 +20,7 @@ const menu2Schema = new Schema({
     required: true,
   },
   drinks: String,
-  // cast: [String],
+
   nowOpen: {
     type: Boolean,
     default: false
