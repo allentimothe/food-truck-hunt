@@ -14,7 +14,7 @@ A minimalisticly themed display for recent updates from the NY Times.
 ![ERD](./public/admin.png)
 ![WIREFRAME](/public/menu.png)
 ![WIREFRAME](/public/home.png)
-![live](./public/live.png)
+![live](/public/live.png)
 
 ## 🎬 Getting Started
 [Click](https://food-truck-hunt.herokuapp.com/users/signin) here to see the live app! 
