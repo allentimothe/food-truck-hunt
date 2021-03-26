@@ -1,7 +1,7 @@
 // Require modules
 const express = require('express');
 const morgan = require('morgan');
-const port = 3000; 
+const port = process.env.PORT || 3000; 
 const indexRouter = require('./routes/index');
 const session = require('express-session');
 const usersRouter = require('./routes/users');

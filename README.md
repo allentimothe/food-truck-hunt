@@ -11,8 +11,8 @@ A minimalisticly themed display for recent updates from the NY Times.
 - Heroku (for deployment)
 
 ## 📸 Screenshots
-![ERD](./images/ERD.png)
-![ERD](./images/admin.png)
+![ERD](public/css/images/admin.png)
+![ERD](/images/admin.png)
 ![ERD](./images/home.png)
 ![live](./img/live.png)
 
