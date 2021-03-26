@@ -11,10 +11,10 @@ A minimalisticly themed display for recent updates from the NY Times.
 - Heroku (for deployment)
 
 ## 📸 Screenshots
-![ERD](../images/admin.png)
-![WIREFRAME](../images/menu.png)
-![WIREFRAME](../images/home.png)
-![live](../images/live.png)
+![ERD](./public/admin.png)
+![WIREFRAME](../public/menu.png)
+![WIREFRAME](../public/home.png)
+![live](./public/live.png)
 
 ## 🎬 Getting Started
 [Click](https://food-truck-hunt.herokuapp.com/users/signin) here to see the live app! 
