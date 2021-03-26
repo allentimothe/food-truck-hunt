@@ -1,4 +1,7 @@
 const Menu = require('../models/menu');
+
+
+
 function index(req, res) {
     res.render("menus/index", {
       menus: Menu.getAll(),
@@ -55,4 +58,3 @@ function index(req, res) {
      //respond with res.redirect
      res.redirect(`/menus/${req.params.id}`)
    }
-  

@@ -9,11 +9,14 @@ const methodOverride = require('method-override');
 // var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var indexxRouter = require('./routes/indexx');
+const reviewsRouter = require("./routes/reviews");
+const locationsRouter = require("./routes/locations");
+
 
 
 // const reviewsRouter = require("./routes/reviews");
 const menusRouter = require('./routes/menus'); 
+const menus2Router = require('./routes/menus2'); 
 
 // Set up express app
 const app = express();
@@ -33,7 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexxRouter);
+
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
 //     next(createError(404));
@@ -62,6 +65,9 @@ app.use('/users', usersRouter);
 // app.use("/", reviewsRouter);
 app.use('/', indexRouter);
 app.use('/menus', menusRouter); 
+app.use('/menus2', menus2Router); 
+app.use("/", reviewsRouter);
+app.use("/", locationsRouter);
 
 
 // Tell App to listen

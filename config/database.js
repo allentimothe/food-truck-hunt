@@ -10,7 +10,8 @@ const db = mongoose.connection;
 mongoose.connect(connectionURI, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 
