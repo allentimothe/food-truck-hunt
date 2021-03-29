@@ -9,14 +9,13 @@ const methodOverride = require('method-override');
 // var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-const reviewsRouter = require("./routes/reviews");
-const locationsRouter = require("./routes/locations");
+// const locationsRouter = require("./routes/locations");
 
 
 
 // const reviewsRouter = require("./routes/reviews");
 const menusRouter = require('./routes/menus'); 
-const menus2Router = require('./routes/menus2'); 
+ 
 
 // Set up express app
 const app = express();
@@ -65,9 +64,7 @@ app.use('/users', usersRouter);
 // app.use("/", reviewsRouter);
 app.use('/', indexRouter);
 app.use('/menus', menusRouter); 
-app.use('/menus2', menus2Router); 
-app.use("/", reviewsRouter);
-app.use("/", locationsRouter);
+// app.use("/", locationsRouter);
 
 
 // Tell App to listen

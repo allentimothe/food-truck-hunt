@@ -24,22 +24,39 @@
 </header>
 <div class="availMain">
 <fieldset class="availContainer">
-<legend>Available Foods</legend>
-<% menus.forEach(function(menu, idx) { %>
-  <li>
-    <form action="/menus/<%= idx %>?_method=DELETE"
+<legend>Log</legend>
+<table>
+  <thead>
+      <th>Employee Name</th>
+      <th>Shift</th>
+      <th>Hours Worked</th>
+  </thead>
+  <tbody>
+      <% menus.forEach(function(m)  { %>
+          <tr>
+              <td><%= m.employeeName %></td>
+              <td><%= m.shift %></td>
+              <td><%= m.hours %></td>
+              <!-- <td><a href="/menus/< %= m._id %>">Edit</a></td>
+              <td><a href="/menus/< %= m.done %>"
+                class="delete-td" method="POST" >Delete</a></td> -->
+          </tr>
+      <% }) %>
+  </tbody>
+</table>
+<!-- < %  menus.forEach(function(menu, idx) { %> -->
+  <!-- <li>
+    <form action="/menus/< %= m._id %>?_method=DELETE"
       class="delete-form" method="POST">
-      <button type="submit">X</button>
+      <button type="submit">x</button>
     </form>
-    <a href="/menus/<%= idx %>">
-      <%= menu.text %>
+    <a href="/menus/< %= m._id %>">
+      < %= m._id %>
     </a>
       - 
-    <%= menu.done ? 'New' : 'Old' %>
   </li>
-<% }); %>
-</ul>
-<a href="/menus/new">Edit Menu</a>
+< % }); %>
+</ul> -->
 </fieldset>
 </div>
 </div>

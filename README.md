@@ -1,6 +1,5 @@
 # food-truck-hunt
-
-A minimalisticly themed display for recent updates from the NY Times.
+App intended to be a back office POS system. Right now the functions are for a user to be able to log in and punch in for their shift.
 
 ## ⚙️ Technologies Used
 - HTML5

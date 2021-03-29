@@ -40,7 +40,7 @@ header {
   width: 40vh;
 }
 
-.optionsContainer {
+.loginContainer {
   display: flex;
   height:28vh;
   width: 40vh;
@@ -202,4 +202,8 @@ h1 {
 #menu-text {
   text-shadow: 2px 2px 0px #595858;
 
+}
+
+.delete-btn {
+  width: 20px;
 }

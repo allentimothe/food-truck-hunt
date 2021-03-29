@@ -1,19 +1,21 @@
 const Menu = require('../models/menu');
-
+// const Location = require('../models/location');
 
 
 function index(req, res) {
-    res.render("menus/index", {
-      menus: Menu.getAll(),
-    });
-  }
+  Menu.find({}, function(err, menus) {
+    res.render('menus/index', { menus })
+  });
+}
   
-  function show(req, res) {
-    res.render("menus/show", {
-      menu: Menu.getOne(req.params.id),
-      menuNum: parseInt(req.params.id) + 1,
-    });
-  }
+
+function show(req, res) {
+  Menu.findById(req.params.id).populate('').exec(function (err, menu) {
+//     Location.find({_id: {$nin: menu.shift }}, function(err, locations) {
+//       res.render("menus/show", { title: "Menu Detail", menu, locations });
+//     });
+  });
+}
   
   module.exports = {
     index,
@@ -30,11 +32,19 @@ function index(req, res) {
    }
 
    function create(req, res) {
-    console.log(req.body);
-    req.body.done = false;
-    Menu.create(req.body);
-    res.redirect('/menus');
-  }
+    for (let key in req.body) {
+      if (req.body[key] === '') delete req.body[key];
+    }
+    req.body.employeeName = req.body.employeeName;
+    req.body.shift = req.body.shift;
+    req.body.hours = req.body.hours;
+  
+      Menu.create(req.body, function(err, menu) {
+          console.log(menu);
+          if(err) return res.render('menus/new')
+          res.redirect('/menus');
+      });
+     }
 
   function deleteMenu(req, res) {
     Menu.deleteOne(req.params.id);
