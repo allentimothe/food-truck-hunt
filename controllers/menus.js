@@ -47,24 +47,37 @@ function show(req, res) {
      }
 
   function deleteMenu(req, res) {
-    Menu.deleteOne(req.params.id);
-    req.body.done = false;
+    Menu.findByIdAndDelete(req.params.id).exec(function(err, menu) { 
+      console.log(err, menu)
+  
     res.redirect('/menus');
-   }
+   });
+  }
 
   function edit(req, res) {
-    const menu = Menu.getOne(req.params.id);
-    res.render('menus/edit', { 
-      menu,
-      menuId: req.params.id,
-     });
-   }
+    Menu.findById(req.params.id, function(err, menu) {
+      console.log(menu);
+      res.render('menus/edit', {title: "Edit", menu});
+    });
+  }
+    // const menu = Menu.findById(req.params.id);
+    // res.render('menus/edit', { 
+    //       menu,
+    //       menuId: req.params.id,
+    //      }); 
+   
+   
 
    function update(req,res) {
-     //done property
-     req.body.done = req.body.done ? true : false; 
+   Menu.findByIdAndUpdate(req.params.id, req.body, function(err)
+   {
+     res.redirect('/menus');
+   })}
+   
+    //done property
+    //  req.body.done = req.body.done ? true : false; 
 
-     Menu.updateOne(req.params.id, req.body);
-     //respond with res.redirect
-     res.redirect(`/menus/${req.params.id}`)
-   }
+    //  Menu.updateOne(req.params.id, req.body);
+    //  //respond with res.redirect
+    //  res.redirect(`/menus/${req.params.id}`)
+   

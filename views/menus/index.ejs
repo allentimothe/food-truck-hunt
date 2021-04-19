@@ -37,16 +37,16 @@
               <td><%= m.employeeName %></td>
               <td><%= m.shift %></td>
               <td><%= m.hours %></td>
-              <!-- <td><a href="/menus/< %= m._id %>">Edit</a></td>
-              <td><a href="/menus/< %= m.done %>"
-                class="delete-td" method="POST" >Delete</a></td> -->
+              <td><a href="/menus/<%= m._id %>/edit">Edit</a></td>
+              <td><form action="/menus/<%= m._id %>?_method=DELETE"
+                class="delete-form" method="POST"><button type="submit">Delete</button></a></td>
           </tr>
       <% }) %>
   </tbody>
 </table>
 <!-- < %  menus.forEach(function(menu, idx) { %> -->
   <!-- <li>
-    <form action="/menus/< %= m._id %>?_method=DELETE"
+    <form action="/menus/<  %= m._id %>?_method=DELETE"
       class="delete-form" method="POST">
       <button type="submit">x</button>
     </form>
