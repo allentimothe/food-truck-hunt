@@ -22,30 +22,38 @@
         </div>
     </div>
     </header>
-    <div class="createMain">
-        <fieldset class="createContainer">
-        <legend>Edit Punch</legend>
-        <form action="/<%=menu._id %>?_method=PUT" method="POST">
-          <label>Employee Name:
-           <input type="text" name="employeeName" value="<%=menu.employeeName %> ">
-          </label>
-          <label>Shift
-           <select name="shift" value="<%=menu.shift %>">
-           <option value="Morning">Morning</option>
-           <option value="Evening">Evening</option>
-           <option value="Night">Night</option>
-           </select>
-          </label>
-        
-          <label>Hours</label>
-        
-            <input type="datetime-local" id="hour"
-               name="hour" value="2021-03-12T19:30"
-               min="2021-02-07T00:00" max="2022-06-14T00:00">
-          <input type="submit" value="Edit">
-        </form>
-        </fieldset>
-        </div>
+    <div class="availMain">
+    <fieldset class="availContainer">
+    <legend>Edit Availability</legend>
+    <h1 id="menu-text"><%= menu.text %></h1>
+    <form action="/menus/<%= menu._id %>?_method=PUT" method="post">
+
+              <label>Employee Name:
+               <input type="text" name="employeeName" value="<%=menu.employeeName %> ">
+              </label>
+              <label>Shift
+               <select name="shift" value="<%=menu.shift %>">
+               <option value="Morning">Morning</option>
+               <option value="Evening">Evening</option>
+               <option value="Night">Night</option>
+               </select>
+              </label>
+            
+              <label>Hours</label>
+            
+                <input type="datetime-local" id="hour"
+                   name="hour" value="2021-03-12T19:30"
+                   min="2021-02-07T00:00" max="2022-06-14T00:00">
+        <label>Description:
+            <input type="text" name="text" value="<%= menu.text %>">
+        </label>
+        <label>Overtime?
+            <input type="checkbox" name="done" <%- menu.done ? 'checked' : ''%>>
+        </label>
+        <button type="submit">Update</button>
+    </form>
+    </fieldset>
+    </div>
     </div>
     </form>
    </body>
